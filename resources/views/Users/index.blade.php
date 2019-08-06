@@ -10,4 +10,7 @@
 
     <button> Go to registration </button>
 </div>
+
+
+
 @endsection

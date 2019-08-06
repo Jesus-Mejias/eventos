@@ -12,13 +12,12 @@
 */
 
 Route::get('/','inicial@index');
-
-Route::get('login','inicial@login')->name('login');
-
-#Route::get('register','inicial@register')->name('register');
-
-
  
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+// |~> Rutas del administrador
+
+
+// |~> Rutas para el usuario
+

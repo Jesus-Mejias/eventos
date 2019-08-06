@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <div class="header">
     Events
     <a id="add-event" href="todo">Add event</a>
@@ -28,3 +31,4 @@
         </tbody>
     </table>
 </div>
+@endsection

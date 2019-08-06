@@ -39,6 +39,11 @@ class LoginController extends Controller
 
     public function redirectPath()
     {
-        dd(auth()->user()->hasRole('Administrador'));
+        //dd(auth()->user()->hasRole('Administrador'));
+        if(auth()->user()->hasRole('Administrador')){
+            return 'admin-dashboard';
+        }
+
+        return 'user-dashboard';
     }
 } 

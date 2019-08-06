@@ -11,13 +11,15 @@
 |
 */
 
-Route::get('/','inicial@index');
+Route::get('/','Dashboard@index');
  
 Auth::routes();
 
 
 // |~> Rutas del administrador
-
+// ]: Ruta para la pagina principal del administrador
+Route::get('admin-dashboard', 'Admin\HomeController@index');
 
 // |~> Rutas para el usuario
-
+// ]: Ruta para la pagina principal del usuario
+Route::get('user-dashboard', 'User\PageController@index');

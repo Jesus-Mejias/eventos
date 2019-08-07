@@ -1,3 +1,7 @@
+@extends('layouts.app')
+@section('title','My events')
+@section('content')
+
 <h1> My events</h1>
 
 <div>
@@ -28,3 +32,4 @@
 
 	</table>
 </div>
+@endsection

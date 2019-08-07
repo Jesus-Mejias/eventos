@@ -4,9 +4,9 @@
 <div class="header">
     Create new event
 </div>
-
+<!--{{ route('storeEvent') }}-->
 <div class="body">
-    <form method="POST" action="{{ route('storeEvent') }}">
+    <form method="POST" action="">
         <div>
             <label for="title">Title</label>
             <input id="title" type="text" name="title">

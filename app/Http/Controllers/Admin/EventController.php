@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Events;
+use Charts;
 
 class EventController extends Controller
 {
@@ -40,7 +41,7 @@ class EventController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request);
+        //dd($request);
     }
 
     /**
@@ -93,6 +94,11 @@ class EventController extends Controller
 
     }
     public function rating(){
-        return view('admin.rating');
+      $chart = Charts::new('line','highcharts')
+        ->setTitle('Ratings')
+        ->setLabels(['lunes','martes','miercoles','jueves'])
+        ->setValues(['14','20','50','45'])
+        ->setElementLabel("Rating");
+        return view('admin.rating',['chart'=>$chart]);
     }
 }

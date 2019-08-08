@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Events;
-use Charts;
+Use App\Charts\RatingChart;
+
 
 class EventController extends Controller
 {
@@ -17,12 +18,6 @@ class EventController extends Controller
     public function index()
     {
         //
-         $chart = Charts::create('line','highcharts')
-        ->seTitle('Ratings')
-        ->setLabels(['lunes','martes','miercoles','jueves'])
-        ->setValues(['14','20','50','45'])
-        ->setElementLabel("Rating");
-        return view('admin.rating',['chart'=>$chart]);
     }
 
     /**
@@ -99,7 +94,19 @@ class EventController extends Controller
         return view('admin.attendee');
 
     }
+
+
     public function rating(){
-     
+
+       $chart = new RatingChart;
+       $chart->title('Events Rating');
+       $chart->labels(['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes']);
+       $chart->dataset('Rating', 'pie', [14, 20, 50, 45, 5]);
+    //     ->setTitle('Ratings')
+    //     ->setLabels(['lunes','martes','miercoles','jueves'])
+    //     ->setValues(['14','20','50','45'])
+    //     ->setElementLabel("Rating");
+
+        return view('admin.rating', compact('chart'));
     }
 }

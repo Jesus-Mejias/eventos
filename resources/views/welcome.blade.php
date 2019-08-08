@@ -6,7 +6,7 @@ usuario pueden visualizarla -->
     <header>
         <h1>Event Bokking Platform</h1>
 
-         <a href="{{ route('rating') }}">Login</a>
+         <a href="{{ route('login') }}">Login</a>
     </header>
 @endsection
 

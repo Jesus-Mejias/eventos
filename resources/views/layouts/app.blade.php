@@ -19,8 +19,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
-    {!!Charts::assets()¡¡}
+
+
 
 </head>
 <body>
@@ -80,5 +80,8 @@
             @yield('content')
         </main>
     </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/6.0.6/highcharts.js" charset="utf-8"></script>
+   
 </body>
 </html>

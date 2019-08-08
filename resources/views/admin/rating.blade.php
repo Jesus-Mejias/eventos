@@ -9,3 +9,5 @@
 {!! $chart->container() !!}
 
 @endsection
+
+{!! $chart->script() !!}

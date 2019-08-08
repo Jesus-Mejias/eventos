@@ -24,7 +24,7 @@ Route::get('create-event', 'Admin\EventController@create')->name('newEvent');
 //]: Ruta para lista de asistencia
 Route::get('atendee', 'Admin\EventController@list')->name('attendeeList');
 //]: Ruta para el rating
-Route::get('rating', 'Admin\EventController@rating')->name('rating');
+Route::get('rating', 'Admin\EventController@index')->name('rating');
 
 //]: Route::post('store', 'Admin\EventController@store')->name('storeEvent');
 

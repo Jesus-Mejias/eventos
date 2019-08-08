@@ -17,6 +17,12 @@ class EventController extends Controller
     public function index()
     {
         //
+         $chart = Charts::create('line','highcharts')
+        ->seTitle('Ratings')
+        ->setLabels(['lunes','martes','miercoles','jueves'])
+        ->setValues(['14','20','50','45'])
+        ->setElementLabel("Rating");
+        return view('admin.rating',['chart'=>$chart]);
     }
 
     /**
@@ -94,11 +100,6 @@ class EventController extends Controller
 
     }
     public function rating(){
-      $chart = Charts::new('line','highcharts')
-        ->setTitle('Ratings')
-        ->setLabels(['lunes','martes','miercoles','jueves'])
-        ->setValues(['14','20','50','45'])
-        ->setElementLabel("Rating");
-        return view('admin.rating',['chart'=>$chart]);
+     
     }
 }

@@ -6,5 +6,6 @@
 
 <h2>Web Conference</h2>
 
+{!! $chart->container() !!}
 
 @endsection

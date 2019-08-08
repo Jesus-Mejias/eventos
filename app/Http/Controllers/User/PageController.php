@@ -19,5 +19,13 @@ class PageController extends Controller
     	return view('Users.index', compact('events'));
     }
 
+    public function register(){
+    	return view('Users.register');
+    }
 
+    public function myEvents(){
+    	return view('Users.myEvents');
+    }
+
+    
 }

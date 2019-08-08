@@ -1,3 +1,7 @@
+@extends('layouts.app')
+@section('title','Event')
+@section('content')
+
 <div class="header">
     Event
     <a id="edit-event" href="todo">Edit event</a>

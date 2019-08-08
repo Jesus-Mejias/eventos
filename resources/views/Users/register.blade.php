@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('title','Register of event')
+@section('content')
 
 <h1>Register of " "</h1>
 
@@ -19,3 +22,4 @@
 <button>Registration of event </button>
 	
 </div>
+@endsection

@@ -1,9 +1,12 @@
+@extends('layouts.app')
+@section('title','Create')
+@section('content')
 <div class="header">
     Create new event
 </div>
-
+<!--{{ route('storeEvent') }}-->
 <div class="body">
-    <form method="POST" action="todo">
+    <form method="POST" action="">
         <div>
             <label for="title">Title</label>
             <input id="title" type="text" name="title">
@@ -76,3 +79,4 @@
         </div>
     </form>
 </div>
+@endsection

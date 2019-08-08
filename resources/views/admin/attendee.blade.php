@@ -1,3 +1,7 @@
+@extends('layouts.app')
+@section('title','Events')
+@section('content')
+
 <table>
 	<thead>
 		<tr>
@@ -17,3 +21,4 @@
 		
 	
 </table>
+@endsection

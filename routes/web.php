@@ -12,7 +12,7 @@
 */
 
 Route::get('/','Dashboard@index');
- 
+
 Auth::routes();
 
 
@@ -26,7 +26,8 @@ Route::get('atendee', 'Admin\EventController@list')->name('attendeeList');
 //]: Ruta para el rating
 Route::get('rating', 'Admin\EventController@rating')->name('rating');
 
-//]: Route::post('store', 'Admin\EventController@store')->name('storeEvent');
+Route::post('/events', 'Admin\EventController@store')->name('events.store');
+
 
 
 

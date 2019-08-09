@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Events;
 Use App\Charts\RatingChart;
-
+use Symfony\Contracts\EventDispatcher\Event;
 
 class EventController extends Controller
 {
@@ -43,6 +43,10 @@ class EventController extends Controller
     {
         //
         //dd($request);
+        $events = Events::create($request->all());
+
+        return redirect()->back()
+            ->with('info', 'Evento creado con exito');
     }
 
     /**

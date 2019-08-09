@@ -1,12 +1,24 @@
 @extends('layouts.app')
 @section('title','Create')
 @section('content')
+
+@if(session('info'))
+       <div class="container">
+            <div class="alert alert-success" role="alert">
+                {{ session('info') }}
+            </div>
+       </div>
+@endif
+
 <div class="header">
     Create new event
 </div>
-<!--{{ route('storeEvent') }}-->
+
 <div class="body">
-    <form method="POST" action="">
+
+    <form method="POST" action="{{ route('events.store') }}">
+        @csrf
+
         <div>
             <label for="title">Title</label>
             <input id="title" type="text" name="title">
@@ -29,7 +41,7 @@
 
         <div>
             <label for="duration_days">Duration (days)</label>
-            <input id="duration_days" type="number" name="duration_days">
+            <input id="duration" type="number" name="duration">
         </div>
 
         <div>
@@ -39,7 +51,7 @@
 
         <div>
             <label for="standard_price">Price</label>
-            <input id="standard_price" type="number" name="standard_price">
+            <input id="price" type="number" name="price">
         </div>
 
         <div>
